@@ -23,18 +23,20 @@
   details[open] summary .seta{transform:rotate(45deg)}
 </style>
 <script>
-  // Anuncios do Google (AdSense) so nesta pagina publica; dentro do app nao ha anuncios.
+  // Anuncios do Google (AdSense) so nas paginas publicas; dentro do app nao ha anuncios.
   // Sem aceite, pedimos anuncios nao personalizados.
   window.adsbygoogle = window.adsbygoogle || [];
   try { adsbygoogle.requestNonPersonalizedAds = localStorage.getItem('ff_cookies') === 'todos' ? 0 : 1; } catch (e) { adsbygoogle.requestNonPersonalizedAds = 1; }
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986389421682455" crossorigin="anonymous"></script>
+
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
 <div class="vitrine">
   <header class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="./" class="flex items-center gap-2.5 font-bold text-lg"><span class="h-10 w-10 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-500 grid place-items-center text-white shadow">F</span>FinanceFlow</a>
     <nav class="flex items-center gap-2 text-sm">
+      <a href="dicas/" class="rounded-xl px-3 py-2 font-medium hover:bg-white/60 dark:hover:bg-slate-800">Dicas</a>
       <a href="app.html" class="rounded-xl px-3 py-2 font-medium hover:bg-white/60 dark:hover:bg-slate-800">Entrar</a>
       <a href="app.html#criar" class="rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 font-semibold whitespace-nowrap">Criar conta<span class="hidden sm:inline"> grátis</span></a>
     </nav>
@@ -104,7 +106,7 @@
 </main>
 
 <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-500">
-  <p><a href="termos.html" class="hover:underline">Termos de Uso</a> · <a href="privacidade.html" class="hover:underline">Privacidade</a> · <a href="#" onclick="try{localStorage.removeItem('ff_cookies')}catch(e){};location.reload();return false" class="hover:underline">Cookies</a> · <a href="mailto:bielmonks@gmail.com" class="hover:underline">Suporte: bielmonks@gmail.com</a></p>
+  <p><a href="dicas/" class="hover:underline">Dicas de finanças</a> · <a href="termos.html" class="hover:underline">Termos de Uso</a> · <a href="privacidade.html" class="hover:underline">Privacidade</a> · <a href="#" onclick="try{localStorage.removeItem('ff_cookies')}catch(e){};location.reload();return false" class="hover:underline">Cookies</a> · <a href="mailto:bielmonks@gmail.com" class="hover:underline">Suporte: bielmonks@gmail.com</a></p>
   <p class="mt-2 text-xs">FinanceFlow 2.0.0 · Não é instituição financeira nem recomendação de investimento.</p>
 </footer>
 <div id="aviso-cookies" hidden class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl p-4 text-sm">
@@ -126,5 +128,6 @@
   });
 })();
 </script>
+
 </body>
 </html>

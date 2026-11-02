@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biellog.github.io/sitemap.xml
