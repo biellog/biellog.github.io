@@ -22,6 +22,13 @@
   details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}
   details[open] summary .seta{transform:rotate(45deg)}
 </style>
+<script>
+  // Anuncios do Google (AdSense) so nesta pagina publica; dentro do app nao ha anuncios.
+  // Sem aceite, pedimos anuncios nao personalizados.
+  window.adsbygoogle = window.adsbygoogle || [];
+  try { adsbygoogle.requestNonPersonalizedAds = localStorage.getItem('ff_cookies') === 'todos' ? 0 : 1; } catch (e) { adsbygoogle.requestNonPersonalizedAds = 1; }
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986389421682455" crossorigin="anonymous"></script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
 <div class="vitrine">
@@ -97,8 +104,27 @@
 </main>
 
 <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-sm text-slate-500">
-  <p><a href="termos.html" class="hover:underline">Termos de Uso</a> · <a href="privacidade.html" class="hover:underline">Privacidade</a> · <a href="mailto:bielmonks@gmail.com" class="hover:underline">Suporte: bielmonks@gmail.com</a></p>
+  <p><a href="termos.html" class="hover:underline">Termos de Uso</a> · <a href="privacidade.html" class="hover:underline">Privacidade</a> · <a href="#" onclick="try{localStorage.removeItem('ff_cookies')}catch(e){};location.reload();return false" class="hover:underline">Cookies</a> · <a href="mailto:bielmonks@gmail.com" class="hover:underline">Suporte: bielmonks@gmail.com</a></p>
   <p class="mt-2 text-xs">FinanceFlow 2.0.0 · Não é instituição financeira nem recomendação de investimento.</p>
 </footer>
+<div id="aviso-cookies" hidden class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl p-4 text-sm">
+  <p>Esta página mostra anúncios do Google, que usam cookies. Sem o seu aceite, os anúncios não são personalizados. <a href="privacidade.html#cookies" class="underline">Saiba mais</a></p>
+  <div class="mt-3 flex gap-2 justify-end">
+    <button data-c="essenciais" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold">Só o necessário</button>
+    <button data-c="todos" class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">Aceitar</button>
+  </div>
+</div>
+<script>
+(function () {
+  var a = document.getElementById('aviso-cookies');
+  try { if (!localStorage.getItem('ff_cookies')) a.hidden = false; } catch (e) { a.hidden = false; }
+  a.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-c]'); if (!b) return;
+    try { localStorage.setItem('ff_cookies', b.dataset.c); } catch (x) {}
+    a.hidden = true;
+    if (b.dataset.c === 'todos') location.reload();
+  });
+})();
+</script>
 </body>
 </html>
