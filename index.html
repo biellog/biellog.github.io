@@ -23,20 +23,29 @@
   details[open] summary .seta{transform:rotate(45deg)}
 </style>
 <script>
+  // Google Analytics (so nas paginas publicas; nunca dentro do app). Modo de consentimento:
+  // sem o aceite no aviso de cookies, a medicao e anonima e sem cookies.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    var aceitou = false; try { aceitou = localStorage.getItem('ff_cookies') === 'todos'; } catch (e) {}
+    var v = aceitou ? 'granted' : 'denied';
+    gtag('consent', 'default', { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v });
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W8D6DZG2"></script>
+<script>
+  gtag('js', new Date());
+</script>
+<script>
   // Anuncios do Google (AdSense) so nas paginas publicas; dentro do app nao ha anuncios.
   // Sem aceite, pedimos anuncios nao personalizados.
   window.adsbygoogle = window.adsbygoogle || [];
   try { adsbygoogle.requestNonPersonalizedAds = localStorage.getItem('ff_cookies') === 'todos' ? 0 : 1; } catch (e) { adsbygoogle.requestNonPersonalizedAds = 1; }
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986389421682455" crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W8D6DZG2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+
 </head>
-  
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
 <div class="vitrine">
   <header class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -126,7 +135,7 @@
   <p class="mt-2 text-xs">FinanceFlow 2.0.11 · Não é instituição financeira nem recomendação de investimento.</p>
 </footer>
 <div id="aviso-cookies" hidden class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl p-4 text-sm">
-  <p>Esta página mostra anúncios do Google, que usam cookies. Sem o seu aceite, os anúncios não são personalizados. <a href="privacidade.html#cookies" class="underline">Saiba mais</a></p>
+  <p>Usamos cookies do Google para anúncios e para contar as visitas do site. Sem o seu aceite, os anúncios não são personalizados e as visitas são contadas sem cookies. <a href="privacidade.html#cookies" class="underline">Saiba mais</a></p>
   <div class="mt-3 flex gap-2 justify-end">
     <button data-c="essenciais" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold">Só o necessário</button>
     <button data-c="todos" class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">Aceitar</button>
