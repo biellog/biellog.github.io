@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comprar o FinanceFlow Pro · R$ 25,99, pagamento único</title>
+<meta name="description" content="Libere metas, orçamento por categoria, lançamentos fixos, alerta de gastos, simulador de investimentos e planilha do Excel. Pagamento único de R$ 25,99 por Pix, cartão ou boleto.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="FinanceFlow Pro: pague uma vez e use para sempre">
+<meta property="og:description" content="R$ 25,99, pagamento único. Pix aprovado na hora.">
+<meta property="og:image" content="icons/icon-512.png">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css?v=2005ea1f82">
+<script>try{var s=localStorage.getItem('ff_dark');var d=s!==null?JSON.parse(s):matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d)}catch(e){}</script>
+<style>
+  :root{--fundo:#ffffff;--faixa:#f5f7fb;--texto:#0f172a;--suave:#475569;--linha:#e5e9f0;--marca:#1d4ed8;--marca2:#1e40af;--ok:#15803d;--aviso:#b45309}
+  html.dark{--fundo:#0b1020;--faixa:#111830;--texto:#e8edf7;--suave:#a3aec4;--linha:#222b45;--marca:#5b8cff;--marca2:#7ea6ff;--ok:#4ade80;--aviso:#fbbf24}
+  html{scroll-behavior:smooth}
+  #comprar,#recursos,#duvidas{scroll-margin-top:80px}
+  body{margin:0;background:var(--fundo);color:var(--texto);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{color:inherit}
+  .caixa{max-width:1080px;margin:0 auto;padding:0 20px}
+  .banda{background:var(--faixa);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+  .topo{position:sticky;top:0;z-index:20;background:var(--fundo);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+  .topo.rolou{border-color:var(--linha);box-shadow:0 6px 20px -16px rgba(15,23,42,.35)}
+  .logo{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--marca);color:#fff;font-weight:800}
+  .botao{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:14px 22px;font:inherit;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:transform .15s,background-color .2s,box-shadow .2s}
+  .botao:active{transform:scale(.98)}
+  .primario{background:var(--marca);color:#fff;box-shadow:0 8px 20px -10px rgba(29,78,216,.55)}
+  .primario:hover{background:var(--marca2)}
+  .secundario{background:transparent;color:var(--texto);border:1.5px solid var(--linha)}
+  .secundario:hover{border-color:var(--suave)}
+  .botao[disabled]{opacity:.55;cursor:not-allowed}
+  h1{font-size:clamp(2rem,6vw,3.25rem);line-height:1.08;letter-spacing:-.03em;margin:0;font-weight:800}
+  h2{font-size:clamp(1.5rem,4vw,2.1rem);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px;font-weight:800}
+  h3{font-size:1.05rem;margin:0 0 6px;font-weight:700}
+  .sub{color:var(--suave);font-size:1.08rem}
+  .rotulo{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--marca)}
+  .grade{display:grid;gap:16px}
+  @media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+  .cartao{background:var(--fundo);border:1px solid var(--linha);border-radius:16px;padding:20px}
+  .ic{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--faixa);border:1px solid var(--linha);margin-bottom:12px}
+  .ic svg{width:22px;height:22px;stroke:var(--marca);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .celular{width:min(260px,70vw);border-radius:30px;padding:8px;background:#0f172a;box-shadow:0 30px 60px -30px rgba(15,23,42,.6)}
+  .celular img{display:block;width:100%;height:auto;border-radius:23px}
+  table{width:100%;border-collapse:collapse;font-size:.97rem}
+  th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--linha)}
+  th:not(:first-child),td:not(:first-child){text-align:center;width:22%}
+  .sim{color:var(--ok);font-weight:800}.nao{color:var(--suave)}
+  ol.passos{counter-reset:p;list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  ol.passos li{counter-increment:p;position:relative;padding-left:52px}
+  ol.passos li::before{content:counter(p);position:absolute;left:0;top:-2px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--marca);color:#fff;font-weight:800}
+  /* compra */
+  .compra{max-width:520px;margin:0 auto;background:var(--fundo);border:1px solid var(--linha);border-radius:20px;padding:24px;box-shadow:0 24px 60px -36px rgba(15,23,42,.45)}
+  .preco{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:4px 0 18px}
+  .preco b{font-size:2.4rem;letter-spacing:-.03em}
+  .campo{display:block;margin-bottom:14px}
+  .campo span{display:block;font-size:.9rem;font-weight:600;margin-bottom:6px}
+  .campo input{width:100%;box-sizing:border-box;padding:13px 14px;border-radius:12px;border:1.5px solid var(--linha);background:var(--fundo);color:var(--texto);font:inherit;font-size:16px;transition:border-color .2s,box-shadow .2s}
+  .campo input:focus{outline:none;border-color:var(--marca);box-shadow:0 0 0 4px rgba(29,78,216,.15)}
+  .aceite{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--suave);margin:4px 0 16px}
+  .aceite input{width:18px;height:18px;margin-top:2px;accent-color:var(--marca)}
+  .msg{font-size:.92rem;margin:10px 0 0;min-height:1.2em}
+  .msg.erro{color:#dc2626}
+  .etapa{display:none}
+  .etapa.ativa{display:block;animation:entra .35s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes entra{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+  .qr{display:block;width:220px;height:220px;margin:6px auto 14px;border-radius:12px;background:#fff;padding:8px;border:1px solid var(--linha);animation:qr .45s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes qr{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+  .copia{display:flex;gap:8px}
+  .copia input{flex:1;min-width:0;padding:12px;border-radius:10px;border:1.5px solid var(--linha);background:var(--faixa);color:var(--texto);font:13px ui-monospace,Menlo,monospace}
+  .estado{display:flex;align-items:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;background:var(--faixa);font-weight:600}
+  .ponto{width:10px;height:10px;border-radius:50%;background:var(--aviso);animation:pulsa 1.4s ease-in-out infinite}
+  @keyframes pulsa{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+  .feito svg{width:76px;height:76px;display:block;margin:0 auto 8px}
+  .feito circle{stroke:var(--ok);stroke-width:4;fill:none;stroke-dasharray:226;stroke-dashoffset:226;animation:traco .6s ease-out forwards}
+  .feito path{stroke:var(--ok);stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60;animation:traco .4s .45s ease-out forwards}
+  @keyframes traco{to{stroke-dashoffset:0}}
+  .pequeno{font-size:.86rem;color:var(--suave)}
+  details{border-bottom:1px solid var(--linha);padding:16px 0}
+  summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';font-weight:400;font-size:1.4rem;line-height:1;color:var(--suave);transition:transform .2s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--suave);margin:10px 0 0}
+  /* aparecer ao rolar a tela */
+  [data-surge]{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1)}
+  [data-surge].visivel{opacity:1;transform:none}
+  .flutua{animation:flutua 6s ease-in-out infinite}
+  @keyframes flutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}[data-surge]{opacity:1;transform:none}}
+  @media(max-width:719px){.so-largo{display:none}.compra{padding:20px;border-radius:18px}}
+</style>
+<script>
+  // Google Analytics (so nas paginas publicas; nunca dentro do app). Modo de consentimento:
+  // sem o aceite no aviso de cookies, a medicao e anonima e sem cookies.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    var aceitou = false; try { aceitou = localStorage.getItem('ff_cookies') === 'todos'; } catch (e) {}
+    var v = aceitou ? 'granted' : 'denied';
+    gtag('consent', 'default', { analytics_storage: v, ad_storage: v, ad_user_data: v, ad_personalization: v });
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W8D6DZG2"></script>
+<script>
+  gtag('js', new Date());
+</script>
+
+</head>
+<body data-f="https://tpzjajvkrrchynardlip.supabase.co/functions/v1/" data-k="sb_publishable_Cya_6cefsxCc7bZ5xS6UNQ_fpiI5mD5" data-cakto="https://pay.cakto.com.br/y4sf4w9_1263775">
+<header class="topo" id="topo">
+  <div class="caixa" style="display:flex;align-items:center;justify-content:space-between;height:64px">
+    <a href="./" style="display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800"><span class="logo">F</span>FinanceFlow</a>
+    <nav style="display:flex;align-items:center;gap:18px;font-size:.95rem">
+      <a class="so-largo" href="#recursos" style="text-decoration:none">O que vem no Pro</a>
+      <a class="so-largo" href="#duvidas" style="text-decoration:none">Dúvidas</a>
+      <a class="botao primario" href="#comprar" style="padding:10px 16px;font-size:.95rem">Comprar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="caixa" style="padding:48px 20px 56px">
+    <div class="grade g2" style="align-items:center;gap:40px">
+      <div data-surge>
+        <span class="rotulo">FinanceFlow Pro</span>
+        <h1 style="margin-top:10px">Pague uma vez e use o Pro para sempre</h1>
+        <p class="sub" style="margin:18px 0 26px">Por R$ 25,99 você libera metas, orçamento por categoria, lançamentos fixos, alerta de gastos, simulador de investimentos e a planilha do Excel. No plano Pro o app não mostra anúncios, no celular e no site.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="botao primario" href="#comprar">Comprar por R$ 25,99</a>
+          <a class="botao secundario" href="#recursos">Ver o que muda</a>
+        </div>
+        <p class="pequeno" style="margin-top:14px">Pix aprovado em poucos segundos. Cartão e boleto pelo Mercado Pago.</p>
+      </div>
+      <div data-surge style="display:grid;place-items:center">
+        <div class="celular flutua"><img src="icons/tela-metas-540.webp" width="540" height="960" alt="Tela de metas do FinanceFlow mostrando quanto já foi guardado e quanto falta" fetchpriority="high"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banda" id="recursos" style="padding:56px 0">
+    <div class="caixa">
+      <div data-surge style="max-width:640px;margin-bottom:28px">
+        <span class="rotulo">O que você ganha</span>
+        <h2 style="margin-top:8px">Recursos que entram na sua conta com o Pro</h2>
+        <p class="sub">Tudo fica salvo na mesma conta. Seus lançamentos de hoje continuam onde estão.</p>
+      </div>
+      <div class="grade g3">
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Metas</h3><p class="pequeno">Defina quanto quer juntar e até quando. O app mostra quanto falta e quanto guardar por mês para chegar lá.</p></div>
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15v-4M12 15V8M16 15v-6"/></svg></span><h3>Orçamento por categoria</h3><p class="pequeno">Coloque um limite para mercado, lazer ou transporte e acompanhe quanto já foi gasto em cada um.</p></div>
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></svg></span><h3>Lançamentos fixos</h3><p class="pequeno">Aluguel, salário e assinaturas entram sozinhos no mesmo dia de cada mês.</p></div>
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6c0 6-3 7-3 7h18s-3-1-3-7a6 6 0 0 0-6-6zM10 20a2 2 0 0 0 4 0"/></svg></span><h3>Alerta de gastos</h3><p class="pequeno">Você recebe um aviso quando as despesas do mês passam da porcentagem que escolheu.</p></div>
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><h3>Simulador de investimentos</h3><p class="pequeno">Informe valor, taxa e vencimento para ver quanto o dinheiro deve render até lá.</p></div>
+        <div class="cartao" data-surge><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/></svg></span><h3>Planilha do Excel</h3><p class="pequeno">Baixe todos os lançamentos numa planilha para conferir no computador.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caixa" style="padding:56px 20px">
+    <div data-surge style="max-width:720px;margin:0 auto">
+      <h2>Grátis e Pro lado a lado</h2>
+      <p class="sub" style="margin-bottom:18px">O plano grátis continua existindo. O Pro acrescenta estes recursos:</p>
+      <table>
+        <thead><tr><th></th><th>Grátis</th><th>Pro</th></tr></thead>
+        <tbody>
+          <tr><td>Receitas, despesas e categorias</td><td class="sim">Sim</td><td class="sim">Sim</td></tr>
+          <tr><td>Gráficos do mês e dos últimos 6 meses</td><td class="sim">Sim</td><td class="sim">Sim</td></tr>
+          <tr><td>Importar extrato do banco</td><td class="sim">Sim</td><td class="sim">Sim</td></tr>
+          <tr><td>Metas de economia</td><td class="nao">Não</td><td class="sim">Sim</td></tr>
+          <tr><td>Orçamento por categoria e alerta de gastos</td><td class="nao">Não</td><td class="sim">Sim</td></tr>
+          <tr><td>Lançamentos fixos automáticos</td><td class="nao">Não</td><td class="sim">Sim</td></tr>
+          <tr><td>Simulador de investimentos e planilha do Excel</td><td class="nao">Não</td><td class="sim">Sim</td></tr>
+          <tr><td>Anúncios no app</td><td class="nao">Tem</td><td class="sim">Não tem</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="banda" style="padding:56px 0">
+    <div class="caixa grade g2" style="gap:40px;align-items:start">
+      <div data-surge>
+        <span class="rotulo">Como funciona</span>
+        <h2 style="margin-top:8px">Da compra ao Pro liberado</h2>
+        <ol class="passos" style="margin-top:20px">
+          <li>Digite o e-mail da sua conta do FinanceFlow. Se ainda não tem conta, use o e-mail com que vai se cadastrar.</li>
+          <li>Pague com Pix pelo QR Code ou pelo código copia e cola. Para cartão ou boleto, você vai para a página do Mercado Pago.</li>
+          <li>Quando o pagamento é confirmado, o Pro é liberado nesse e-mail. No Pix isso leva poucos segundos; no boleto, até 3 dias úteis.</li>
+          <li>Abra o app ou o site com o mesmo e-mail. Se o app já estava aberto, feche e abra de novo.</li>
+        </ol>
+      </div>
+
+      <div id="comprar" data-surge>
+        <div class="compra" aria-live="polite">
+          <!-- etapa 1: dados -->
+          <div class="etapa ativa" id="e-dados">
+            <h2 style="font-size:1.5rem">Comprar o FinanceFlow Pro</h2>
+            <div class="preco"><b>R$ 25,99</b><span class="pequeno">pagamento único, sem mensalidade</span></div>
+            <label class="campo"><span>E-mail da sua conta</span><input id="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@email.com" required></label>
+            <label class="campo"><span>Seu nome (opcional)</span><input id="nome" type="text" autocomplete="name" maxlength="60" placeholder="Como aparece no comprovante"></label>
+            <label class="aceite"><input id="aceite" type="checkbox"><span>Li e aceito os <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+            <div class="grade" style="gap:10px">
+              <button class="botao primario" id="b-pix" type="button">Pagar com Pix</button>
+              <button class="botao secundario" id="b-cartao" type="button">Cartão ou boleto</button>
+            </div>
+            <p class="msg" id="m-dados" role="alert"></p>
+            <p class="pequeno" style="margin-top:12px">O pagamento é processado pelo Mercado Pago. O FinanceFlow não recebe nem guarda os dados do seu cartão.</p>
+          </div>
+
+          <!-- etapa 2: pix -->
+          <div class="etapa" id="e-pix">
+            <h2 style="font-size:1.4rem">Pague com Pix</h2>
+            <p class="pequeno">Abra o app do seu banco, escolha pagar com Pix e leia o QR Code. Valor: <b>R$ 25,99</b>.</p>
+            <img class="qr" id="qr" alt="QR Code do Pix">
+            <label class="campo" style="margin-bottom:0"><span>Ou use o Pix copia e cola</span></label>
+            <div class="copia"><input id="copia" readonly aria-label="Código Pix copia e cola"><button class="botao primario" id="b-copiar" type="button" style="padding:10px 16px">Copiar</button></div>
+            <div class="estado"><span class="ponto"></span><span id="s-pix">Aguardando o pagamento</span></div>
+            <p class="pequeno" style="margin-top:10px">O código vale por <b id="tempo">30:00</b>. Pode deixar esta página aberta: ela avisa quando o pagamento chegar.</p>
+            <p class="pequeno"><a href="#comprar" id="b-voltar">Trocar o e-mail ou a forma de pagamento</a></p>
+          </div>
+
+          <!-- etapa: conferindo (volta do cartao/boleto) -->
+          <div class="etapa" id="e-conferindo">
+            <h2 style="font-size:1.4rem">Conferindo o pagamento</h2>
+            <div class="estado"><span class="ponto"></span><span id="s-conf">Estamos confirmando com o Mercado Pago.</span></div>
+            <p class="pequeno" style="margin-top:12px">Pagamento com boleto leva até 3 dias úteis para ser confirmado. Quando isso acontecer, o Pro é liberado sozinho no seu e-mail.</p>
+          </div>
+
+          <!-- etapa 3: pronto -->
+          <div class="etapa feito" id="e-pronto" style="text-align:center">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-23"/></svg>
+            <h2 style="font-size:1.5rem">Pagamento confirmado</h2>
+            <p class="sub" style="font-size:1rem">O Pro já está liberado para <b id="p-email"></b>.</p>
+            <div class="grade" style="gap:10px;margin-top:18px">
+              <a class="botao primario" href="app.html#entrar">Entrar no FinanceFlow</a>
+              <a class="botao secundario" href="app.html#criar">Ainda não tenho conta: criar agora</a>
+              <a class="botao secundario" href="FinanceFlow.apk" download>Baixar o app para Android</a>
+            </div>
+            <p class="pequeno" style="margin-top:14px">Guarde o comprovante que aparece no app do seu banco. O Mercado Pago também manda o recibo por e-mail.</p>
+          </div>
+
+          <!-- sem Mercado Pago configurado: continua pela Cakto -->
+          <div class="etapa" id="e-cakto">
+            <h2 style="font-size:1.4rem">Compra pela Cakto</h2>
+            <p class="pequeno">O pagamento direto por esta página ainda está sendo ativado. Enquanto isso, a compra continua pela Cakto, com o mesmo preço e a mesma liberação automática.</p>
+            <a class="botao primario" id="b-cakto" href="#" style="width:100%;box-sizing:border-box;margin-top:12px">Comprar pela Cakto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="caixa" style="padding:56px 20px">
+    <div class="grade g2" style="gap:40px">
+      <div data-surge>
+        <h2>Se não gostar, você tem 7 dias para desistir</h2>
+        <p class="sub">Pelo artigo 49 do Código de Defesa do Consumidor, você pode pedir o dinheiro de volta em até 7 dias depois da compra. Basta escrever para <a href="mailto:bielmonks@gmail.com">bielmonks@gmail.com</a>. Feito o reembolso, a conta volta para o plano grátis e os seus lançamentos continuam salvos.</p>
+      </div>
+      <div id="duvidas" data-surge>
+        <h2>Dúvidas</h2>
+        <details><summary>Vou pagar todo mês?</summary><p>Não. São R$ 25,99 uma única vez. Não existe mensalidade nem renovação.</p></details>
+        <details><summary>Já comprei pela Cakto. Muda alguma coisa?</summary><p>Não. Quem comprou pela Cakto continua com o Pro na mesma conta.</p></details>
+        <details><summary>Paguei e o Pro não apareceu. O que eu faço?</summary><p>Confira se você entrou no app com o mesmo e-mail usado na compra. Se o e-mail estiver certo e o Pro não aparecer em alguns minutos, escreva para bielmonks@gmail.com e mande o comprovante.</p></details>
+        <details><summary>Funciona no iPhone?</summary><p>Funciona pelo site. No Safari, abra biellog.github.io, entre na sua conta, toque em Compartilhar e depois em "Adicionar à Tela de Início".</p></details>
+        <details><summary>É seguro pagar por aqui?</summary><p>O pagamento acontece no Mercado Pago. O FinanceFlow recebe apenas a confirmação de que foi pago e o e-mail informado na compra.</p></details>
+        <details><summary>Posso parcelar no cartão?</summary><p>A compra no cartão é à vista, para você não pagar juros de parcelamento.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="banda" style="padding:28px 0;font-size:.9rem;color:var(--suave)">
+  <div class="caixa" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between">
+    <span>FinanceFlow · organize receitas, despesas e metas</span>
+    <span><a href="termos.html">Termos de Uso</a> · <a href="privacidade.html">Privacidade</a> · <a href="mailto:bielmonks@gmail.com">Suporte</a></span>
+  </div>
+</footer>
+<div id="aviso-cookies" hidden class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 shadow-xl p-4 text-sm">
+  <p>Usamos cookies do Google para anúncios e para contar as visitas do site. Sem o seu aceite, os anúncios não são personalizados e as visitas são contadas sem cookies. <a href="privacidade.html#cookies" class="underline">Saiba mais</a></p>
+  <div class="mt-3 flex gap-2 justify-end">
+    <button data-c="essenciais" class="px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold">Só o necessário</button>
+    <button data-c="todos" class="px-3 py-2 rounded-xl bg-indigo-600 text-white font-semibold">Aceitar</button>
+  </div>
+</div>
+<script>
+(function () {
+  var a = document.getElementById('aviso-cookies');
+  try { if (!localStorage.getItem('ff_cookies')) a.hidden = false; } catch (e) { a.hidden = false; }
+  a.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-c]'); if (!b) return;
+    try { localStorage.setItem('ff_cookies', b.dataset.c); } catch (x) {}
+    a.hidden = true;
+    if (b.dataset.c === 'todos') location.reload();
+  });
+})();
+</script>
+
+<script src="comprar.js"></script>
+</body>
+</html>
